@@ -1,18 +1,19 @@
 @import url("reset.css");
 /* This is a custom font from google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* what is :root? https://developer.mozilla.org/en-US/docs/Web/CSS/:root */
 :root {
   /* Define design variables */
-  --color-primary: #2b2d42;
-  --color-secondary: #bfc6d2;
-  --color-background: #f5f5f5;
-  --color-accent: #535bf2;
+  --color-primary: #550663;
+  --color-secondary: #1487d4;
+  --color-background: #e0f1f8;
+  --color-accent: #7b87f0;
 
   --border-radius: 0.5rem;
 
-  --font-titles: "Frank Ruhl Libre", serif;
+  --font-titles: "Montserrat";
   --font-body: system-ui, sans-serif; /* system-ui matches the user's system font */
 }
 
@@ -20,23 +21,28 @@ body {
   color: var(--color-primary);
   background-color: var(--color-background);
   font-family: var(--font-body);
+  display: grid;
+  font-size: 1.1rem;
 }
 
-/* Layout */
+/* Layout
 main {
   padding: 2rem;
-}
+} */
 
 header {
-  padding: 1rem;
+  /* padding: 1rem; */
+  font-size: 1.3rem;
 }
 
 main,
-header,
-nav {
+header{
+  display: flex;
   max-width: 60rem;
   margin: 0 auto;
+  justify-items: center;
 }
+
 
 article,
 nav {
@@ -75,6 +81,8 @@ h6 {
 
 h1 {
   font-size: 2.5em;
+  background-color: #a3abf5;
+  background-size: 100% 100%;
 }
 
 h2 {
@@ -97,6 +105,18 @@ h6 {
   font-size: 0.83em;
 }
 
+.navbar {
+  background-color: var(--color-primary); /* Background color */
+  height: 100px; /* Fixed height for the navbar */
+  width: 100%;
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Center items vertically */
+  padding: 0 20px; /* Horizontal padding */
+  color: white; /* Text color */
+  font-size: 3em;
+  font-family: "Montserrat";
+  justify-content: center;
+}
 blockquote {
   padding-left: 1rem;
   border-left: 2px solid var(--color-secondary);
@@ -137,22 +157,29 @@ fieldset {
   margin-top: 1.5rem;
   border: 1px solid var(--color-secondary);
 }
-
-.counter-button {
-  background-color: var(--color-accent);
-  width: 2rem;
-  height: 2rem;
-  color: white;
-  border: none;
-  border-radius: 1000px; /* Make the button round */
-  cursor: pointer;
-  font-weight: bold;
-
-  &:hover {
-    filter: brightness(120%);
-  }
-
-  &:active {
-    filter: brightness(80%);
-  }
+.pre{
+  font-size: 1.1em;
+  margin: 2.2em 0;
 }
+.beautiful-button {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  background: var(--color-accent);
+  color: white; /* Text color */
+  padding: 12px 24px; /* Padding around the text */
+  border: none; /* Removes default border */
+  border-radius: 30px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  /* font-weight: bold; */
+  cursor: pointer; /* Changes cursor to pointer */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
+}
+
+.beautiful-button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb); /* Reverse gradient on hover */
+  transform: scale(1.05); /* Slightly enlarges the button */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Increases shadow on hover */
+}
+
