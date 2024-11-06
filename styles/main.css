@@ -22,7 +22,22 @@ body {
   background-color: var(--color-background);
   font-family: var(--font-body);
   display: grid;
+  place-items: center;
   font-size: 1.1rem;
+}
+
+.leftImages{
+  display: flex;
+  height: 3em;
+  width: 3em;
+  justify-self: start;
+  transition: transform 0.3s ease; 
+}
+
+
+
+.leftImages:hover img {
+  transform: translateY(-10px) rotate(5deg) scale(1.1);
 }
 
 /* Layout
@@ -183,3 +198,60 @@ fieldset {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Increases shadow on hover */
 }
 
+.info-box {
+  margin: 20px 0 5px 10px;          /* Limits the width of the box */
+  max-width: 300px; 
+  padding: 20px;              /* Adds padding inside the box */
+  border-radius: 8px;         /* Rounds the corners */
+  background-color: #f0f8ff;  /* Light background color */
+  border: 1px solid #ddd;     /* Subtle border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+  text-align: center;         /* Centers text inside the box */
+  transition: transform 0.3s ease; /* Adds a smooth transform effect */
+}
+
+/* Icon for the info box */
+.info-box .icon {
+  font-size: 40px;
+  color: #4A90E2;
+  margin-bottom: 10px;
+}
+
+/* Title for the info box */
+.info-box h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Description for the info box */
+.info-box p {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Hover effect */
+.info-box:hover {
+  transform: scale(1.05); /* Slightly enlarges the box */
+}
+
+.boxes{
+  height: fit-content;
+  display: inline-flex;
+}
+
+.center{
+  display: grid;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+}
+
+.backButton{
+  margin: 10px 0;
+  justify-self: center;
+}
+
+.headNextPage{
+  font-size: large;
+}
